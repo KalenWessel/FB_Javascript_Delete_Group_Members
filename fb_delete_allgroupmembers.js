@@ -13,7 +13,7 @@ function deleteMembers(userCount){
 	setTimeout(function(){
         document.getElementsByClassName("_42ft _42fu layerConfirm uiOverlayButton selected _42g- _42gy")[0].click()
     }, 4000);
-	setTimeout(deleteMembers(userCount),1000);
+	setInterval(deleteMembers(userCount),1000);
 }
 
 deleteMembers(deleteAll.elms.length);
