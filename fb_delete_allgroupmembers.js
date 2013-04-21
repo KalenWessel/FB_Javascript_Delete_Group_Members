@@ -5,15 +5,16 @@ deleteAll.elms = [];
 deleteAll.elms = document.getElementsByClassName("uiPopoverButton _p uiButton uiButtonSuppressed uiButtonNoText");
 
 function deleteMembers(userCount){
-	userCount--;
-	if(userCount < 0)
-		return
-	document.getElementsByClassName("uiPopoverButton _p uiButton uiButtonSuppressed uiButtonNoText")[userCount].click()
+	dUser = userCount - 1;
+	if(dUser <= 0) 
+		throw new Error("Don't delete admin!");
+
+	document.getElementsByClassName("uiPopoverButton _p uiButton uiButtonSuppressed uiButtonNoText")[dUser].click()
 	document.getElementsByClassName("_54nc")[1].click()
 	setTimeout(function(){
         document.getElementsByClassName("_42ft _42fu layerConfirm uiOverlayButton selected _42g- _42gy")[0].click()
-    }, 4000);
-	setInterval(deleteMembers(userCount),1000);
+    }, 2000);
+	var timer = window.setInterval(function(){deleteMembers(dUser)}, 5000);
 }
 
 deleteMembers(deleteAll.elms.length);
