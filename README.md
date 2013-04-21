@@ -1,4 +1,10 @@
-FB_Javascript_Delete_Group_Members
+Facebook Delete All Group Members
 ==================================
 
-Delete all group members from a Facebook group using javascript and the Chrome console.
+With a little javascript magic, this script runs through all the group members on the loaded page
+and deletes them one by one. 
+
+Usage
+=====
+    Open up Chrome Console
+	Paste the JS code into the console and hit enter
