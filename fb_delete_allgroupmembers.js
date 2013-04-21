@@ -5,6 +5,8 @@ deleteAll.elms = [];
 deleteAll.elms = document.getElementsByClassName("uiPopoverButton _p uiButton uiButtonSuppressed uiButtonNoText");
 
 function deleteMembers(dUser){
+	if (dUser < 1)
+		throw new Error("Don't delete the last user which in my case is the administrator");
 	setTimeout(function(){
 		document.getElementsByClassName("uiPopoverButton _p uiButton uiButtonSuppressed uiButtonNoText")[dUser].click()
 	}, 500);
@@ -21,5 +23,5 @@ function deleteMembers(dUser){
 	setTimeout(function() { deleteMembers(dUser - 1); }, 5000)
 }
 
-deleteMembers(deleteAll.elms.length);
+deleteMembers(deleteAll.elms.length-1);
 
