@@ -14,7 +14,11 @@ function deleteMembers(userCount){
 	setTimeout(function(){
         document.getElementsByClassName("_42ft _42fu layerConfirm uiOverlayButton selected _42g- _42gy")[0].click()
     }, 2000);
-	var timer = window.setInterval(function(){deleteMembers(dUser)}, 5000);
+	setTimeout(function(){
+		node = document.getElementsByClassName('uiContextualLayerPositioner uiLayer hidden_elem')[0];
+		node.parentNode.removeChild(node);
+	}, 4000);
+	setInterval(function(){deleteMembers(dUser)}, 5000);
 }
 
 deleteMembers(deleteAll.elms.length);
