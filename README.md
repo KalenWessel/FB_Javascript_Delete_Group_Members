@@ -8,5 +8,6 @@ It is not the fastest script but it works and allows me to drink beer instead of
 
 Usage
 =====
+    Browse to your members page http://facebook.com/group/xxxx/members
     Open up Chrome Console
 	Paste the JS code into the console and hit enter
